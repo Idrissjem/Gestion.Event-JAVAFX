@@ -15,7 +15,11 @@ Trouvez l'espace idéal pour votre événement grâce à des filtres avancés ba
 Les utilisateurs peuvent laisser des évaluations après avoir organisé un événement dans un lieu, aidant ainsi les autres organisateurs à prendre des décisions éclairées. De plus, le partage d'images permet aux utilisateurs de visualiser le lieu avant de réserver, ajoutant une dimension visuelle à leur expérience de recherche sur FitConnect.
 
 Communication :
-Confirmation de réservation via QR code et notifications par SMS, assurant une communication transparente et efficace entre les propriétaires de lieux et les organisateurs d'événements. Restez informé à chaque étape du processus de réservation sur FitConnect.
+Confirmation de réservation via QR code et notifications par SMS, as![Capture d'écran 2024-04-26 000801](https://github.com/Idrissjem/Gestion.Event-JAVAFX/assets/99485316/9efafbef-5cee-4937-8ff9-6151a26aab6b)
+![Capture d'écran 2024-04-26 000738](https://github.com/Idrissjem/Gestion.Event-JAVAFX/assets/99485316/2fbdca4f-c2d2-4b36-a430-f28e6a3fcb0b)
+![Capture d'écran 2024-04-26 000901](https://github.com/Idrissjem/Gestion.Event-JAVAFX/assets/99485316/ff9df2cd-5eb7-4024-b4b6-30c5dabe5acb)
+![Capture d'écran 2024-04-26 000837](https://github.com/Idrissjem/Gestion.Event-JAVAFX/assets/99485316/0d6ec7d6-0eb1-4a2d-838c-85ff409629c2)
+surant une communication transparente et efficace entre les propriétaires de lieux et les organisateurs d'événements. Restez informé à chaque étape du processus de réservation sur FitConnect.
 
 Ces fonctionnalités sont soutenues par des technologies de pointe, garantissant une expérience utilisateur optimale sur FitConnect. L'application utilise des systèmes avancés pour la gestion des réservations, la sécurité des transactions et la communication en temps réel, assurant ainsi une interaction efficace pour tous les utilisateurs de la plateforme.
 
