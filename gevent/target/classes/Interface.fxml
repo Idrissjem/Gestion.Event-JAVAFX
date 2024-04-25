@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="529.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Interface">
+   <children>
+      <Pane fx:id="pn_signup" layoutY="1.0" prefHeight="529.0" prefWidth="853.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="348.0" layoutY="42.0" prefHeight="40.0" prefWidth="244.0" text="Create your account now " />
+            <TextField fx:id="tf_fn" layoutX="80.0" layoutY="120.0" prefHeight="26.0" prefWidth="252.0" promptText="Your first name .." />
+            <TextField fx:id="tf_ln" layoutX="491.0" layoutY="120.0" prefHeight="26.0" prefWidth="244.0" promptText="Your last name .." />
+            <TextField fx:id="tf_num" layoutX="80.0" layoutY="236.0" prefHeight="26.0" prefWidth="244.0" promptText="Your phone number .." />
+            <TextField fx:id="tf_email" layoutX="491.0" layoutY="237.0" prefHeight="26.0" prefWidth="244.0" promptText="Your email .." />
+            <TextField fx:id="tf_pass" layoutX="84.0" layoutY="326.0" prefHeight="26.0" prefWidth="244.0" promptText="Your password .." />
+            <Button layoutX="624.0" layoutY="420.0" mnemonicParsing="false" onAction="#signup" prefHeight="25.0" prefWidth="104.0" text="Signup" />
+            <Hyperlink layoutX="592.0" layoutY="459.0" onAction="#toSignin" prefHeight="23.0" prefWidth="179.0" text="already have account signin" />
+         </children>
+      </Pane>
+      <Pane fx:id="pn_home" layoutX="-1.0" layoutY="-2.0" prefHeight="530.6" prefWidth="853.6" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="2.0" prefHeight="530.0" prefWidth="136.0">
+               <children>
+                  <Button layoutX="5.0" layoutY="128.0" mnemonicParsing="false" onAction="#toUpdate" prefHeight="26.0" prefWidth="125.0" text="my account" />
+                  <Button layoutX="2.0" layoutY="479.0" mnemonicParsing="false" onAction="#tosignin" prefHeight="26.0" prefWidth="126.0" text="logout" />
+                  <Button layoutX="6.0" layoutY="55.0" mnemonicParsing="false" onAction="#toHome" prefHeight="26.0" prefWidth="125.0" text="Events" />
+                  <Button layoutX="1.0" layoutY="93.0" mnemonicParsing="false" onAction="#topart" prefHeight="26.0" prefWidth="136.0" text="My participations" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="138.0" layoutY="-3.0" prefHeight="530.0" prefWidth="720.0">
+               <children>
+                  <Pane fx:id="pn_update" prefHeight="530.0" prefWidth="720.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="33.0" layoutY="34.0" prefHeight="32.0" prefWidth="357.0" text="My personal information">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tf_fn1" layoutX="33.0" layoutY="126.0" prefHeight="26.0" prefWidth="252.0" promptText="Your first name .." />
+                        <TextField fx:id="tf_ln1" layoutX="444.0" layoutY="126.0" prefHeight="26.0" prefWidth="244.0" promptText="Your last name .." />
+                        <TextField fx:id="tf_num1" layoutX="33.0" layoutY="242.0" prefHeight="26.0" prefWidth="244.0" promptText="Your phone number .." />
+                        <TextField fx:id="tf_email1" layoutX="444.0" layoutY="243.0" prefHeight="26.0" prefWidth="244.0" promptText="Your email .." />
+                        <TextField fx:id="tf_pass1" layoutX="37.0" layoutY="332.0" prefHeight="26.0" prefWidth="244.0" promptText="Your password .." />
+                        <Button layoutX="538.0" layoutY="433.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="125.0" text="Update" />
+                        <Hyperlink layoutX="33.0" layoutY="427.0" onAction="#delete" prefHeight="23.0" prefWidth="125.0" text="delete my account" textFill="RED" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pn_index" layoutY="-5.0" prefHeight="530.0" prefWidth="720.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="282.0" layoutY="35.0" prefHeight="17.0" prefWidth="157.0" text="All events">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="29.0" layoutY="65.0" prefHeight="405.0" prefWidth="670.0">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.2000274658203" minWidth="10.0" prefWidth="108.79998779296875" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="552.0" layoutY="488.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="137.0" text="refresh" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pn_part" layoutX="-1.0" layoutY="2.0" prefHeight="530.0" prefWidth="720.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="282.0" layoutY="35.0" prefHeight="17.0" prefWidth="157.0" text="My events">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="29.0" layoutY="65.0" prefHeight="405.0" prefWidth="670.0">
+                           <content>
+                              <GridPane fx:id="grid1" prefHeight="0.0" prefWidth="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.2000274658203" minWidth="10.0" prefWidth="108.79998779296875" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="552.0" layoutY="488.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="137.0" text="refresh" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_signin" layoutY="-1.0" prefHeight="531.0" prefWidth="854.0" style="-fx-background-color: white;" styleClass="root" stylesheets="@style.css">
+         <children>
+            <TextField fx:id="tf_log" layoutX="519.0" layoutY="161.0" prefHeight="40.0" prefWidth="317.0" promptText="Your email .." />
+            <TextField layoutX="519.0" layoutY="225.0" prefHeight="40.0" prefWidth="317.0" promptText="Your password .." />
+            <Button layoutX="626.0" layoutY="285.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="104.0" text="Login" />
+            <Hyperlink layoutX="599.0" layoutY="328.0" onAction="#toSignup" text="don't have account ? signup" />
+            <Label layoutX="599.0" layoutY="112.0" prefHeight="32.0" prefWidth="171.0" text="Hello and welcome back">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="id" layoutX="777.0" layoutY="485.0" text="Label" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,6 @@
+.root {
+    /* Set background image */
+    -fx-background-image: url("bg.png");
+    /* Scale background image to cover the entire window */
+    -fx-background-size: cover;
+}

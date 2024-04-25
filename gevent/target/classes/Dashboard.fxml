@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="498.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Dashboard">
+   <children>
+      <Pane prefHeight="498.0" prefWidth="123.0">
+         <children>
+            <Button layoutX="9.0" layoutY="71.0" mnemonicParsing="false" onAction="#tocreateevent" prefHeight="25.0" prefWidth="110.0" text="Creat event" />
+            <Button layoutX="9.0" layoutY="119.0" mnemonicParsing="false" onAction="#toeventlist" prefHeight="25.0" prefWidth="110.0" text="Event list" />
+            <Label layoutX="11.0" layoutY="29.0" prefHeight="25.0" prefWidth="89.0" text="Event manger " underline="true">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_addevent" layoutX="122.0" prefHeight="498.0" prefWidth="742.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="280.0" layoutY="32.0" prefHeight="25.0" prefWidth="136.0" text="Create event">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_nom" layoutX="105.0" layoutY="98.0" prefHeight="25.0" prefWidth="183.0" />
+            <TextArea fx:id="tf_desc" layoutX="107.0" layoutY="159.0" prefHeight="115.0" prefWidth="472.0" />
+            <TextField fx:id="tf_lieu" layoutX="105.0" layoutY="310.0" prefHeight="25.0" prefWidth="193.0" />
+            <DatePicker fx:id="tf_date" layoutX="106.0" layoutY="374.0" prefHeight="25.0" prefWidth="199.0" />
+            <Label layoutX="17.0" layoutY="98.0" prefHeight="25.0" prefWidth="70.0" text="Nom :">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="159.0" prefHeight="25.0" prefWidth="89.0" text="Description :">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="310.0" prefHeight="25.0" prefWidth="70.0" text="Lieu :">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="374.0" prefHeight="25.0" prefWidth="70.0" text="Date :">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="597.0" layoutY="444.0" mnemonicParsing="false" onAction="#addevent" prefHeight="25.0" prefWidth="110.0" text="Create" />
+         </children>
+      </Pane>
+      <Pane fx:id="pn_eventlist" layoutX="122.0" prefHeight="498.0" prefWidth="742.0" style="-fx-background-color: white;">
+         <children>
+            <ScrollPane layoutX="4.0" layoutY="61.0" prefHeight="374.0" prefWidth="722.0">
+               <content>
+                  <GridPane fx:id="grid" prefHeight="198.0" prefWidth="692.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <Button layoutX="626.0" layoutY="452.0" mnemonicParsing="false" onAction="#refresh" prefHeight="26.0" prefWidth="98.0" text="Refresh" />
+            <Label layoutX="307.0" layoutY="23.0" prefHeight="25.0" prefWidth="89.0" text="Event list">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
